@@ -33,14 +33,14 @@ function App() {
 
         <div class="row">
           {actors.map((actor) => (
-            <div class='col-3'>
-              <div className="card" style={{ width: '250px', display: 'flex' }}>
+            <div class='col-3 mb-4'>
+              <div className="card h-100 g-4" style={{ width: '300px', display: 'flex' }}>
 
-                {actor.name}
+                <h4>{actor.name}</h4>
                 <img src={actor.image} />
-                {actor.birth_year}
-                {actor.nationality}
-                {actor.biography}
+                <span>{actor.birth_year}</span>
+                <span>{actor.nationality}</span>
+                <span>{actor.biography}</span>
               </div>
             </div>
           ))}

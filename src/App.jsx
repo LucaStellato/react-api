@@ -8,10 +8,10 @@ function App() {
   const [actress, setActress] = useState([])
   const api_server_actor = 'https://lanciweb.github.io/demo/api/actors/'
   const api_server_actress = 'https://lanciweb.github.io/demo/api/actresses/'
-  function apiActor() {
-    useEffect(apiActor, [])
-    useEffect(apiActress, [])
 
+  useEffect(apiActor, [])
+  useEffect(apiActress, [])
+  function apiActor() {
     axios.get(api_server_actor).then(response => {
       console.log(response.data)
       setActors(response.data)

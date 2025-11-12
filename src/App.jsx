@@ -29,18 +29,18 @@ function App() {
   return (
     <>
       <h1>Actor identity</h1>
-      <div className="card" style={{ width: '18rem' }}>
-        {actors.map((actor) => (
 
-          <li>
-            {actor.name}
-            <img src={actor.image} />
-            {actor.birth_year}
-            {actor.nationality}
-            {actor.biography}
-          </li>
-        ))}
-      </div>
+      {actors.map((actor) => (
+        <div className="card" style={{ width: '18rem' }}>
+
+          {actor.name}
+          <img src={actor.image} />
+          {actor.birth_year}
+          {actor.nationality}
+          {actor.biography}
+        </div>
+      ))}
+
 
     </>
   )

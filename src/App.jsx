@@ -32,8 +32,8 @@ function App() {
       <div>
         {actors.map((actor) => (
           <li>
-            <img src={actor.image} />
             {actor.name}
+            <img src={actor.image} />
             {actor.birth_year}
             {actor.nationality}
             {actor.biography}

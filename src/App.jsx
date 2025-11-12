@@ -5,7 +5,7 @@ import axios from 'axios'
 
 function App() {
   const [actors, setActors] = useState([])
-  const [actress, setActress] = useState([])
+  const [actresses, setActress] = useState([])
   const api_server_actor = 'https://lanciweb.github.io/demo/api/actors/'
   const api_server_actress = 'https://lanciweb.github.io/demo/api/actresses/'
 
@@ -29,9 +29,9 @@ function App() {
   return (
     <>
       <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg" style={{ backgroundColor: '#d8d3d3' }}>
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">ACTOR IDENTITY</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -43,12 +43,6 @@ function App() {
                 <li class="nav-item">
                   <a class="nav-link" href="#">Features</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
               </ul>
             </div>
           </div>
@@ -57,8 +51,8 @@ function App() {
       </header>
 
 
-      <main>
-        <h1>Actor identity</h1>
+      <main className='' style={{}}>
+        <h1 style={{ textAlign: 'center', marginBottom: '30px' }}>Actor identity</h1>
         <div class="container">
 
           <div class="row">
@@ -75,6 +69,29 @@ function App() {
               </div>
             ))}
           </div>
+
+        </div>
+
+
+
+        <h1 style={{ textAlign: 'center', marginBottom: '30px' }}>Actresses identity</h1>
+        <div class="container">
+
+          <div class="row">
+            {actresses.map((actress) => (
+              <div class='col-3 mb-4'>
+                <div className="card h-100 g-4" style={{ width: '300px', display: 'flex' }}>
+
+                  <h4>{actress.name}</h4>
+                  <img src={actress.image} />
+                  <span>{actress.birth_year}</span>
+                  <span>{actress.nationality}</span>
+                  <span>{actress.biography}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
 
         </div>
       </main>

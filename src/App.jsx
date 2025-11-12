@@ -9,12 +9,15 @@ function App() {
   const api_server_actor = 'https://lanciweb.github.io/demo/api/actors/'
   const api_server_actress = 'https://lanciweb.github.io/demo/api/actresses/'
   axios.get(api_server_actor).then(response => {
-    console.log(response.data.results)
-  }),
+    console.log(response.data)
+    setActor(response.data)
+  })
+  axios.get(api_server_actress).then(response => {
+    console.log(response.data)
+    setActress(response.data)
+  })
 
-    axios.get(api_server_actress).then(response => {
-      console.log(response.data.results)
-    })
+
 
   return (
     <>

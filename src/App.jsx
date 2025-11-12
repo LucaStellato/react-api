@@ -29,8 +29,9 @@ function App() {
   return (
     <>
       <h1>Actor identity</h1>
-      <div>
+      <div className="card" style={{ width: '18rem' }}>
         {actors.map((actor) => (
+
           <li>
             {actor.name}
             <img src={actor.image} />

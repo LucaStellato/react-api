@@ -6,10 +6,13 @@ import axios from 'axios'
 function App() {
   const [actor, setActor] = useState([])
   const [actress, setActress] = useState([])
-  const api_server_actor = 'https://lanciweb.github.io/demo/api/actresses/'
+  const api_server_actor = 'https://lanciweb.github.io/demo/api/actors/'
+  const api_server_actress = 'https://lanciweb.github.io/demo/api/actresses/'
+
 
   return (
     <>
+
 
     </>
   )

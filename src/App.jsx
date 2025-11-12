@@ -29,17 +29,24 @@ function App() {
   return (
     <>
       <h1>Actor identity</h1>
+      <div class="container">
 
-      {actors.map((actor) => (
-        <div className="card" style={{ width: '18rem' }}>
+        <div class="row">
+          {actors.map((actor) => (
+            <div class='col-3'>
+              <div className="card" style={{ width: '250px', display: 'flex' }}>
 
-          {actor.name}
-          <img src={actor.image} />
-          {actor.birth_year}
-          {actor.nationality}
-          {actor.biography}
+                {actor.name}
+                <img src={actor.image} />
+                {actor.birth_year}
+                {actor.nationality}
+                {actor.biography}
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
+
+      </div>
 
 
     </>

@@ -4,24 +4,36 @@ import axios from 'axios'
 
 
 function App() {
-  const [actor, setActor] = useState([])
+  const [actors, setActors] = useState([])
   const [actress, setActress] = useState([])
   const api_server_actor = 'https://lanciweb.github.io/demo/api/actors/'
   const api_server_actress = 'https://lanciweb.github.io/demo/api/actresses/'
-  axios.get(api_server_actor).then(response => {
-    console.log(response.data)
-    setActor(response.data)
-  })
-  axios.get(api_server_actress).then(response => {
-    console.log(response.data)
-    setActress(response.data)
-  })
+  function apiActor() {
+    useEffect(apiActor, [])
+    useEffect(apiActress, [])
+
+    axios.get(api_server_actor).then(response => {
+      console.log(response.data)
+      setActors(response.data)
+    })
+  }
+  function apiActress() {
+    axios.get(api_server_actress).then(response => {
+      console.log(response.data)
+      setActress(response.data)
+    })
+  }
 
 
 
   return (
     <>
-
+      <h1>Actor identity</h1>
+      <div>
+        {actors.map((actor) => (
+       
+      ))}
+      </div>
 
     </>
   )

@@ -31,8 +31,14 @@ function App() {
       <h1>Actor identity</h1>
       <div>
         {actors.map((actor) => (
-       
-      ))}
+          <li>
+            <img src={actor.image} />
+            {actor.name}
+            {actor.birth_year}
+            {actor.nationality}
+            {actor.biography}
+          </li>
+        ))}
       </div>
 
     </>
